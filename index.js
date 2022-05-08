@@ -35,10 +35,9 @@ async function run() {
         });
 
         // post item
-        //post data
         app.post('/item', async (req, res) => {
             const newItem = req.body;
-            const result = await serviceCollection.insertOne(newItem);
+            const result = await itemCollection.insertOne(newItem);
             res.send(result);
         });
 
